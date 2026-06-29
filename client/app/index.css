@@ -1,0 +1,32 @@
+.name{
+    font-weight: 700;
+  background: linear-gradient(
+  90deg,
+  #6590F2 0%,
+  #7D74EF 50%,
+  #8747EA 100%
+);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+transition: all 0.3s ease;
+}
+
+.name:hover {
+  text-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
+}
+
+.create-room {
+    background: linear-gradient(
+        135deg,
+        rgba(28, 78, 198, 0.8) 0%,
+        rgba(29, 69, 163, 0.8) 100%
+    );
+}
+
+.joinRoom {
+    background: linear-gradient(
+        135deg,
+        rgba(115, 39, 188, 0.8) 0%,
+        rgba(98, 36, 158, 0.8) 100%
+    );
+}

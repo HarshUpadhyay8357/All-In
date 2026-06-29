@@ -1,0 +1,53 @@
+.login-card {
+  background: rgba(34, 18, 56, 0.25);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    0 0 20px rgba(145, 94, 255, 0.15);
+}
+.heading {
+  background: linear-gradient(90deg, #9B8CFF, #C46CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.input {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #F3EEFF;
+  backdrop-filter: blur(10px);
+}
+
+.input:focus {
+  outline: none;
+  border-color: #9B8CFF;
+  box-shadow: 0 0 12px rgba(155, 140, 255, 0.4);
+}
+
+.input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.input:focus {
+  border-color: #9B8CFF;
+  box-shadow: 0 0 15px rgba(155,140,255,0.4);
+}
+.login-btn {
+  background: linear-gradient(90deg, #6C4BFF, #A34CFF);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  box-shadow:
+    0 0 15px rgba(108,75,255,0.5),
+    0 0 30px rgba(163,76,255,0.3);
+  transform: translateY(-2px);
+}
+.register-link {
+  color: #B893FF;
+}
+
+.register-link:hover {
+  text-shadow: 0 0 10px rgba(184,147,255,0.7);
+}
