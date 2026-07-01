@@ -10,8 +10,6 @@ export class GameFlowManager{
 
     //start a new hand 
     static startNewHand(state:GameState):void {
-        GameStateManager.resetForNextHand(state);
-
         const deck = new Deck();
 
         //post blinds

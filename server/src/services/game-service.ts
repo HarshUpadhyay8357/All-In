@@ -367,11 +367,20 @@ export class GameService{
     const room = await db.select().from(rooms).where(eq(rooms.id, roomId));
     const buyin = room[0]?.buyin || 1000;
 
-    gameState.players.forEach(p => {
+    gameState.handNumber = 1;
+    gameState.dealerIndex = 0;
+    const isHeadsUp = gameState.players.length === 2;
+    gameState.smallBlindIndex = isHeadsUp ? 0 : 1 % gameState.players.length;
+    gameState.bigBlindIndex = isHeadsUp ? 1 : 2 % gameState.players.length;
+
+    gameState.players.forEach((p, i) => {
       p.chips = buyin;
       p.bet = 0;
       p.totalBetThisHand = 0;
       p.holeCards = [];
+      p.isDealer = i === gameState.dealerIndex;
+      p.isSmallBlind = i === gameState.smallBlindIndex;
+      p.isBigBlind = i === gameState.bigBlindIndex;
       if (p.status !== 'disconnected') {
         p.status = 'active';
       }
