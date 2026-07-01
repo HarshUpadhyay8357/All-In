@@ -9,4 +9,7 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/server.ts', // Don't test the server entry point
   ],
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
+  },
 };

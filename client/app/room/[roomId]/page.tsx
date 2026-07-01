@@ -49,10 +49,10 @@ export default function RoomPage() {
     ? (gameState.players.find((p: any) => p.chips > 0) || gameState.players[0])
     : null;
 
-  // Reset submit throttle on turn change
+  // Reset submit throttle on game state change
   useEffect(() => {
     setSubmitting(false);
-  }, [gameState?.currentPlayerIndex]);
+  }, [gameState]);
 
   // Reset submit throttle on socket errors
   useEffect(() => {
