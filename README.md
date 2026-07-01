@@ -16,11 +16,17 @@ Live demo: https://all-in-orcin.vercel.app/
 ## Tech Stack
 
 **Frontend:** Next.js, TypeScript, Zustand, Socket.IO client
+
 **Backend:** Node.js, Express, Socket.IO, TypeScript
+
 **Database:** PostgreSQL (Neon) via Drizzle ORM
+
 **Cache / Game State:** Redis (Upstash)
+
 **Hand Evaluation:** pokersolver
+
 **Deployment:** Vercel (frontend), Render (backend)
+
 
 ## Key Engineering Decisions
 
@@ -36,22 +42,28 @@ Live demo: https://all-in-orcin.vercel.app/
 
 ## Local Setup
 
-\`\`\`bash
-git clone https://github.com/yourusername/poker-website.git
-cd poker-website
+bash
+git clone https://github.com/HarshUpadhyay8357/All-In.git
 
+cd poker   
+ 
 # Backend
 cd server
+
 npm install
+
 cp .env.example .env   # fill in your own DB/Redis/JWT values
+
 npm run dev
 
 # Frontend (separate terminal)
 cd client
+
 npm install
+
 cp .env.example .env.local
+
 npm run dev
-\`\`\`
 
 ## Demo
 
